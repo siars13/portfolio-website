@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio personnel site web</title>  
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo2.png" class="logo">
+            <ul>
+                <li><a href="#about">À propos de moi</a></li>
+                <li><a href="#portfolio">Portfolio</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="header-text">
+            <p>Étudiant au baccalauréat en informatique<br>à l'Université Laval</p>
+            <h1><span>Simon</span> Arsenault</h1>
+        </div>
+    </div>
+</div>
+<!-- ---------- ABOUT ------- -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/background.png">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">À propos de moi</h1>
+                <p>Bienvenue sur mon site web!<br>Je suis Simon Arsenault, étudiant en informatique à l'Université Laval,
+                où j'explore les vastes horizons de la technologie et de la programmation. Je m'intéresse beaucoup à ce qui attrait
+                à la finance computationnelle. Entre autres, la compréhension des mécanismes complexes qui régissent les marchés financiers
+                à travers l'analyse algorithmique et quantitative. On parle ici des techniques comme l'apprentissage
+                machine, l'analyse de données massives et de la modélisation financière prédictive.</p>
+
+                <div class="tab-titles">
+                    <p class="tab-links active-link" onclick="opentab('compétences')">Compétences</p>
+                    <p class="tab-links" onclick="opentab('expérience')">Expérience</p>
+                    <p class="tab-links" onclick="opentab('éducation')">Éducation</p>
+                </div> 
+                <div class="tab-contents active-tab" id="compétences">
+                    <ul>
+                        <li><span>(GLO-1901)</span><br>Python</li>
+                        <li><span>(IFT-1004)</span><br>C++</li>
+                        <li><span>(MAT-2910)</span><br>MatLab</li>
+                        <li><span>Programmation web (par moi-même)</span><br>HTML et CSS</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="expérience">
+                    <ul>
+                        <li><span>Aucune au niveau professionnel</span><br>À la recherche d'un premier stage</li>
+                    </ul>
+                </div>
+                <div class="tab-contents" id="éducation">
+                    <ul>
+                        <li><span>Université Laval</span><br>Baccalauréat en informatique (en cours)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- -------PORTFOLIO--------- -->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Portfolio</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/port.png">
+            </div>
+            <div class="work">
+                <img src="images/port2.png">
+            </div>
+            <div class="work">
+                <img src="images/port4.png">
+            </div>
+        </div>
+     
+    </div>
+</div>
+<!-- --------------CONTACT-------------- -->
+<div id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contactez-moi</h1>
+                <p><i class="fa-regular fa-paper-plane"></i> siars13@ulaval.ca</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/simon-arsenault-3302b4235/" class="linkedin-link"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/siars13" class="github-link"><i class="fa-brands fa-github"></i></a>
+                </div>
+                <a href="images/CV-université 2023-05-16.docx" class="btn">Téléchargez mon CV</a>
+            </div>
+            <div class="contact-right">
+            </div>
+        </div>
+    </div>
+    <div class="copyright">
+        <p>Copyright<i class="fa-regular fa-copyright"></i> Simon</p>
+    </div>
+</div>
+
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+
+    function opentab(tabname){
+        for(i of tablinks){
+            i.classList.remove("active-link")
+        }
+        for(k of tabcontents){
+            k.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+</body>
+</html>
